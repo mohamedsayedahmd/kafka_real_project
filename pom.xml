@@ -13,6 +13,9 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>kafka-real-project</name>
 	<description>spring boot and kafka</description>
+	<modules>
+		<module>kafka-producer-wikimedia</module>
+	</modules>
 	<packaging>pom</packaging>
 	<properties>
 		<java.version>11</java.version>

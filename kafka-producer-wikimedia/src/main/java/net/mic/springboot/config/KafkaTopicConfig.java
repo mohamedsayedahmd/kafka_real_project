@@ -1,4 +1,4 @@
-package net.mic.springboot;
+package net.mic.springboot.config;
 
 import org.apache.kafka.clients.admin.NewTopic;
 import org.springframework.context.annotation.Bean;

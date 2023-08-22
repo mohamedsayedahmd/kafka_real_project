@@ -30,7 +30,7 @@ public class WikimediaChangesProducer {
         String url = "https://stream.wikimedia.org/v2/stream/recentchange";
         EventSource.Builder builder = new EventSource.Builder(eventHandler, URI.create(url));
         EventSource eventSource = builder.build();
-        eventSource.start();
+        eventSource.start();// Thread
         TimeUnit.MINUTES.sleep(10);
 
     }

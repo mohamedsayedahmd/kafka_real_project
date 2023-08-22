@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
 
+// OkHttp EventSource - dependency
 public class WikimediaChangesHandler implements EventHandler {
     private static final Logger LOGGER = LoggerFactory.getLogger(WikimediaChangesHandler.class);
 
@@ -29,8 +30,8 @@ public class WikimediaChangesHandler implements EventHandler {
 
     @Override
     public void onMessage(String s, MessageEvent messageEvent) throws Exception {
-        LOGGER.info(String.format("event data -> %s",messageEvent.getData()));
-        kafkaTemplate.send(topic,messageEvent.getData());
+        LOGGER.warn(String.format("event data -> %s",messageEvent.getData()));
+        kafkaTemplate.send(topic,messageEvent.getData()); // send to the topic
     }
 
     @Override
